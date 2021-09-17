@@ -1,7 +1,52 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title%}My Blog{% endblock%}
 
+{% block styles %}
+<link rel="stylesheet" href="{% static "blog/index.css" %}">
+{% endblock %}
+
 {% block body %}
-  <h1>Welcome to my blog</h1>
+  <header id="main-navigation">
+    <h1><a href="">My Blog</a></h1>
+    <nav>
+      <a href="">All Posts</a>
+    </nav>
+  </header>
+
+  <section id="welcome">
+    <header>
+      <img src="" alt="The author of this blog">
+      <h2>MY BLOG</h2>
+    </header>
+
+    <p>Hi, it's me, and I'd like to share with you my passion for tech and the world.</p>
+  </section>
+
+  <section id="latest-posts">
+    <h2>My latests thoughts</h2>
+
+    <ul>
+      <li>
+        <article class="post">
+          <a href="">
+            <img src="" alt="Mountain Hiking" />
+            <div class="post__content">
+              <h3>Mountain Hiking</h3>
+              <p>There's nothing like the views you get when hiking in the mountains! And I wasn't even prepared for what happened whilst I was enjoying the view!</p>
+            </div>
+          </a>
+        </article>
+      </li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>What I Do</h2>
+    <p>I love programming, I love to help others and I enjoy exploring new technologies in general!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </section>
+
+  
 {% endblock %}
