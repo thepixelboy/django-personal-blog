@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title%}Page not found{% endblock%}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static "error.css" %}">
+{% endblock %}
+
+{% block body %}
+  <section id="error">
+    <header>
+      <img src="{% static "images/404kenobi.png" %}" alt="404 Kenoi says">
+      <h2>404</h2>
+    </header>
+    <p>This is not the page you are looking for.</p>
+  </section>
+{% endblock %}
