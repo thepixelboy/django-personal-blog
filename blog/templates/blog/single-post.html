@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title%}This is the post title{% endblock%}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static "blog/post-detail.css" %}">
+{% endblock %}
+
+{% block body %}
+  <section id="summary">
+    <h2>Post Title</h2>
+    <article>
+      <img src="{% static "blog/images/mountains.jpg" %}" alt="Post Title" />
+      <address>By The Pixelboy</address>
+      <div>
+        Las updated on <time>July 10th</time>
+      </div>
+    </article>
+  </section>
+
+  <main>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut omnis odio, nemo totam repellendus corrupti mollitia possimus, quisquam, perspiciatis culpa eos asperiores! Vel, deleniti placeat facere voluptates quaerat praesentium officia.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam facilis dolorum fugit sunt nisi officiis aliquam quibusdam eum. Mollitia perspiciatis aliquid quasi et aperiam quos, ex nesciunt numquam nobis a.</p>
+  </main>
+{% endblock %}
