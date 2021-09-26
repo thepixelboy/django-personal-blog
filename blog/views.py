@@ -34,5 +34,6 @@ def single_post(request, slug):
         "blog/single-post.html",
         {
             "post": post,
+            "tags": post.tags.all(),
         },
     )
