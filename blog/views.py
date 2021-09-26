@@ -1,12 +1,5 @@
-from datetime import date
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Post
-
-all_posts = []
-
-
-def get_date(post):
-    return post["date"]
 
 
 # Create your views here.
@@ -24,6 +17,7 @@ def starting_page(request):
 
 
 def posts(request):
+    all_posts = Post.objects.all().order_by("-date")
     return render(
         request,
         "blog/all-posts.html",
@@ -34,7 +28,7 @@ def posts(request):
 
 
 def single_post(request, slug):
-    post = next(post for post in all_posts if post["slug"] == slug)
+    post = get_object_or_404(Post, slug=slug)
     return render(
         request,
         "blog/single-post.html",
