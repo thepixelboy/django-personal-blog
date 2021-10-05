@@ -30,7 +30,8 @@
 
   <section id="comment-form">
     <h2>Your comment:</h2>
-    <form action="">
+    <form action="{% url "single-post-page" post.slug %}" method="POST">
+      {% csrf_token %}
       {% for form_field in comment_form %}
         <div class="form-control">
           {{ form_field.label_tag }}
