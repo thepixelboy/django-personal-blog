@@ -59,3 +59,8 @@ class SinglePostView(View):
         }
 
         return render(request, "blog/single-post.html", context)
+
+
+class ReadLaterView(View):
+    def post(self, request, slug):
+        ...

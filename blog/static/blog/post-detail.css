@@ -57,6 +57,26 @@ body {
   font-weight: bold;
 }
 
+#read-later {
+  margin: 2rem 0;
+}
+
+#read-later button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 00.5rem 2rem;
+  font: inherit;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#read-later button:hover,
+#read-later button:active {
+  background-color: #fff;
+  color: #390281;
+}
+
 main {
   width: 90%;
   max-width: 90rem;
@@ -70,8 +90,9 @@ main {
 .tag {
   background-color: #fff;
   color: #390281;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
 }
 
 #comment-form {

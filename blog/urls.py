@@ -9,4 +9,5 @@ urlpatterns = [
         views.SinglePostView.as_view(),
         name="single-post-page",
     ),
+    path("read-later", views.ReadLaterView.as_view(), name="read-later"),
 ]
