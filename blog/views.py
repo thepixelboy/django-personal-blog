@@ -53,7 +53,7 @@ class SinglePostView(View):
         context = {
             "post": post,
             "tags": post.tags.all(),
-            "comment_form": CommentForm(),
+            "comment_form": comment_form,
         }
 
         return render(request, "blog/single-post.html", context)
