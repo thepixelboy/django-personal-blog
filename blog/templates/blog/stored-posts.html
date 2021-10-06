@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title%}My Soterd Posts{% endblock%}
+
+{% block body %}
+  <section>
+    {% if not has_posts %}
+      <p>You didn't save any posts for later.</p>
+    {% endif %}
+    <ul>
+      {% for post in posts %}
+        <li><a href="{% url "single-post-page" post.slug %}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endblock %}
